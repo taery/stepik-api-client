@@ -4,7 +4,7 @@ import org.apache.http.conn.ssl.SSLConnectionSocketFactory
 import org.apache.http.impl.client.HttpClients
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory
 import org.springframework.web.client.RestTemplate
-import org.stepik.api.client.StepikCoursesList
+import org.stepik.api.client.courses.CourseList
 import java.security.cert.X509Certificate
 
 
@@ -40,7 +40,7 @@ open class Application {
             // TODO this part only for experiments
 
             val restTemplate = RestTemplate(requestFactory)
-            val courses = restTemplate.getForEntity("https://stepik.org/api/courses", StepikCoursesList::class.java)
+            val courses = restTemplate.getForEntity("https://stepik.org/api/courses", CourseList::class.java)
             println(courses)
         }
     }

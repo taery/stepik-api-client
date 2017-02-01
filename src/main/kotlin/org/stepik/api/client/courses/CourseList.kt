@@ -1,4 +1,4 @@
-package org.stepik.api.client
+package org.stepik.api.client.courses
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
@@ -7,4 +7,4 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
  * Created: 01/02/2017
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class StepikCoursesList(var courses: List<StepikCourse>)
+data class CourseList(var courses: List<Course>)
